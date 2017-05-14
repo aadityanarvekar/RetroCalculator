@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Minecrafter.Reg.ttf">
+            <string>Minecrafter</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Retro_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="D5q-MJ-3oQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="agW-wA-34d">
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="cPr-w2-9gc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="Hxd-F6-sfR">
+                                <rect key="frame" x="31" y="50" width="312" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="jkP-Ku-lRS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel" translatesAutoresizingMaskIntoConstraints="NO" id="KGY-qn-JCe">
+                                <rect key="frame" x="31" y="133" width="312" height="459"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4EY-d1-kfQ">
+                                <rect key="frame" x="72.5" y="162.5" width="230" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rRH-NJ-UU6">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLa-2f-arx">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="LcW-XD-gia"/>
+                                                    <constraint firstAttribute="height" constant="60" id="dqf-l5-08M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="7"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YGe-Bg-c3j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwh-vC-dOT">
+                                                <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="krU-o4-s3o"/>
+                                                    <constraint firstAttribute="width" constant="60" id="lZr-gZ-Bh6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="8"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHU-Jh-neH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-jA-LlP">
+                                                <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="2aG-iI-wDT"/>
+                                                    <constraint firstAttribute="width" constant="60" id="H7c-ip-MPv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="9"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2s-hg-vIh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9j3-hO-zIv">
+                                        <rect key="frame" x="0.0" y="85" width="230" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBC-10-o7D">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="OuW-Ha-kdb"/>
+                                                    <constraint firstAttribute="height" constant="60" id="fRl-G5-cKS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="4" backgroundImage="4"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlx-St-H9i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-nA-fMB">
+                                                <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="45s-MY-Ln5"/>
+                                                    <constraint firstAttribute="height" constant="60" id="h9M-Jh-3fd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="5"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsx-lL-7Ti"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-Zg-8Cq">
+                                                <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="eAY-NI-bJe"/>
+                                                    <constraint firstAttribute="width" constant="60" id="vGf-2g-1yL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="6"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LdW-uw-aQi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="BLI-4f-MLh">
+                                        <rect key="frame" x="0.0" y="170" width="230" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-bx-PTr">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="IWv-fn-a6C"/>
+                                                    <constraint firstAttribute="width" constant="60" id="h0f-6g-dEl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="1"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2l9-lO-nuR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wH-gv-4ah">
+                                                <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="10Z-6c-auN"/>
+                                                    <constraint firstAttribute="height" constant="60" id="yvq-Kh-0ts"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="2"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DP0-Yb-qka"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-Uf-QvE">
+                                                <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="3Cv-Hl-gKG"/>
+                                                    <constraint firstAttribute="height" constant="60" id="dUJ-4a-5YO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="3"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vX-H3-aBb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-u8-USp">
+                                        <rect key="frame" x="0.0" y="255" width="230" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-zs-nN0">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="6dB-su-oqW"/>
+                                                    <constraint firstAttribute="height" constant="60" id="Z5P-13-7CF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="0"/>
+                                                <connections>
+                                                    <action selector="numberBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ib-Rc-2Q0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUz-LW-Q1Z">
+                                                <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="LCK-bV-aQQ"/>
+                                                    <constraint firstAttribute="height" constant="60" id="PKp-Ze-gIs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="divide"/>
+                                                <connections>
+                                                    <action selector="divideBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9P-qd-NEa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqa-Ow-EMu">
+                                                <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="J5r-52-qsk"/>
+                                                    <constraint firstAttribute="height" constant="60" id="w0G-6o-cDe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="multiply"/>
+                                                <connections>
+                                                    <action selector="multiplyBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wal-gp-tTX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-bx-7US">
+                                        <rect key="frame" x="0.0" y="340" width="230" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyH-eQ-H4Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="45X-cN-tRE"/>
+                                                    <constraint firstAttribute="width" constant="60" id="iEZ-nQ-2W9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="subtract"/>
+                                                <connections>
+                                                    <action selector="minusBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbS-Rc-xnF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-Ye-PFJ">
+                                                <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="KJd-m9-4AZ"/>
+                                                    <constraint firstAttribute="width" constant="60" id="OfD-4x-2S7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="add"/>
+                                                <connections>
+                                                    <action selector="plutBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9I-Fp-2mf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hek-ca-8WV">
+                                                <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="d7k-oH-oIh"/>
+                                                    <constraint firstAttribute="height" constant="60" id="fqA-M9-6gS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="17"/>
+                                                <state key="normal" image="equal"/>
+                                                <connections>
+                                                    <action selector="equalToBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsP-lw-xWa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-Wz-BzM">
+                                <rect key="frame" x="48" y="62" width="282" height="35.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dt1-je-kMZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="35.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="30"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="right" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Zv-Bu-if7">
+                                        <rect key="frame" x="199.5" y="0.0" width="82.5" height="35.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Minecrafter" family="Minecrafter" pointSize="35"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pBD-Wz-BzM" firstAttribute="trailing" secondItem="Hxd-F6-sfR" secondAttribute="trailing" constant="-13" id="0hS-nH-RhP"/>
+                            <constraint firstItem="Hxd-F6-sfR" firstAttribute="centerX" secondItem="agW-wA-34d" secondAttribute="centerX" id="2FK-XK-XC3"/>
+                            <constraint firstAttribute="trailing" secondItem="D5q-MJ-3oQ" secondAttribute="trailing" id="2r9-aj-eCC"/>
+                            <constraint firstItem="D5q-MJ-3oQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5bw-FJ-zcp"/>
+                            <constraint firstItem="Hxd-F6-sfR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="E7o-pV-bpe"/>
+                            <constraint firstItem="4EY-d1-kfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M4x-xf-cTc"/>
+                            <constraint firstItem="4EY-d1-kfQ" firstAttribute="centerY" secondItem="KGY-qn-JCe" secondAttribute="centerY" id="Mpk-Ct-g7y"/>
+                            <constraint firstItem="agW-wA-34d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OhH-ig-wCb"/>
+                            <constraint firstItem="KGY-qn-JCe" firstAttribute="top" secondItem="Hxd-F6-sfR" secondAttribute="bottom" constant="29" id="Pt8-nv-lHm"/>
+                            <constraint firstItem="Hxd-F6-sfR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Toq-UA-OWQ"/>
+                            <constraint firstItem="D5q-MJ-3oQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wqk-mf-OdD"/>
+                            <constraint firstItem="KGY-qn-JCe" firstAttribute="trailing" secondItem="Hxd-F6-sfR" secondAttribute="trailing" id="Zq0-k8-DNb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D5q-MJ-3oQ" secondAttribute="bottom" id="e6G-rx-Gbk"/>
+                            <constraint firstAttribute="trailing" secondItem="agW-wA-34d" secondAttribute="trailing" id="fn0-Wc-t0Z"/>
+                            <constraint firstItem="KGY-qn-JCe" firstAttribute="leading" secondItem="Hxd-F6-sfR" secondAttribute="leading" id="oSi-GW-Ig7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="agW-wA-34d" secondAttribute="bottom" id="pVw-MH-cVQ"/>
+                            <constraint firstItem="pBD-Wz-BzM" firstAttribute="height" secondItem="Hxd-F6-sfR" secondAttribute="height" multiplier="0.65" id="sYa-QY-3bb"/>
+                            <constraint firstItem="pBD-Wz-BzM" firstAttribute="centerY" secondItem="Hxd-F6-sfR" secondAttribute="centerY" constant="2.5" id="wR1-1U-4Sf"/>
+                            <constraint firstItem="agW-wA-34d" firstAttribute="top" secondItem="KGY-qn-JCe" secondAttribute="bottom" constant="27" id="y1E-QW-enf"/>
+                            <constraint firstItem="pBD-Wz-BzM" firstAttribute="leading" secondItem="Hxd-F6-sfR" secondAttribute="leading" constant="17" id="yBi-cq-qB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLbl" destination="Dt1-je-kMZ" id="XS2-05-YM9"/>
+                        <outlet property="selectedOperationLbl" destination="9Zv-Bu-if7" id="2qF-ow-Aon"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" id="uP1-fV-jOM">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHl-3d-m7Q">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Q1i-3h-A6M"/>
+                                <constraint firstAttribute="width" constant="55" id="ysD-gR-8lW"/>
+                            </constraints>
+                            <state key="normal" image="0"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nve-WZ-bV5">
+                            <rect key="frame" x="55" y="0.0" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="I3i-41-cSS"/>
+                                <constraint firstAttribute="height" constant="55" id="bfU-Zw-zYb"/>
+                            </constraints>
+                            <state key="normal" image="0"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-3N-DGc">
+                            <rect key="frame" x="110" y="0.0" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="1Qg-8N-ezj"/>
+                                <constraint firstAttribute="width" constant="55" id="WyH-Ik-DAW"/>
+                            </constraints>
+                            <state key="normal" image="0"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="221.59999999999999" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0" width="111" height="114"/>
+        <image name="1" width="111" height="114"/>
+        <image name="2" width="111" height="114"/>
+        <image name="3" width="111" height="114"/>
+        <image name="4" width="111" height="114"/>
+        <image name="5" width="111" height="114"/>
+        <image name="6" width="111" height="114"/>
+        <image name="7" width="111" height="114"/>
+        <image name="8" width="111" height="114"/>
+        <image name="9" width="111" height="114"/>
+        <image name="add" width="111" height="114"/>
+        <image name="backpanel" width="620" height="938"/>
+        <image name="counter" width="516" height="133"/>
+        <image name="divide" width="111" height="114"/>
+        <image name="equal" width="111" height="114"/>
+        <image name="ground" width="888" height="72"/>
+        <image name="multiply" width="111" height="114"/>
+        <image name="space-bg" width="988" height="946"/>
+        <image name="subtract" width="111" height="114"/>
+    </resources>
+</document>
